@@ -1,0 +1,145 @@
+<!--
+  @description       : 
+  @author            : dcoppins.cert@gmail.com
+  @group             : 
+  @last modified on  : 04-24-2022
+  @last modified by  : dcoppins.cert@gmail.com
+-->
+<template>
+  <template if:false={showModal}>
+    <lightning-card
+      variant="Narrow"
+      title="InGenius Start"
+      icon-name="standard:case"
+    >
+      <lightning-button-icon
+        icon-name="utility:down"
+        variant="border-filled"
+        alternative-text="Show More"
+        slot="actions"
+      ></lightning-button-icon>
+      <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+      <lightning-button
+        variant="base"
+        label="showQuickActions"
+        title="Answer Me"
+        onclick={handleQuickActions}
+      ></lightning-button>
+      <p slot="footer">Card Footer</p>
+    </lightning-card>
+  </template>
+  <template if:true={showModal}>
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open slds-modal_medium"
+    >
+      <div class="slds-modal__container">
+        <!-- Header Start -->
+        <header class="slds-modal__header">
+          <lightning-button-icon
+            class="slds-modal__close"
+            title="Next"
+            icon-name="utility:close"
+            icon-class="slds-button_icon-inverse"
+            onclick={handleCancelModal}
+          ></lightning-button-icon>
+
+          <h2 class="slds-text-heading_medium slds-hyphenate header-string">
+            Access York Tier 1 - Quick Actions v0.004
+          </h2>
+        </header>
+        <!-- Header End -->
+        <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <div class="grid_body">
+            <div class="one">
+              <button class="button" name="one" onclick={handleModalMain}>
+                <span class="btn_text">Call Disconnected</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+
+            <div class="two">
+              <button class="button" onclick={handleModalMain}>
+                <span class="btn_text">Call Transfer Q2</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+            <div class="three">
+              <button class="button" onclick={handleModalMain}>
+                <span class="btn_text">Call Transfer Q3</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+            <div class="four">
+              <button class="button" onclick={handleModalMain}>
+                <span class="btn_text">Customer Transfer</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+            <div class="five">
+              <button class="button" onclick={handleModalMain}>
+                <span class="btn_text">Provincial Offence Tickets</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+            <div class="six">
+              <button class="button" onclick={handleModalMain}>
+                <span class="btn_text">Transfer to Public Works</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+
+            <div class="eight">
+              <button class="button" onclick={handleModalMain}>
+                <span class="btn_text">Create a Case</span>
+                <lightning-icon
+                  class="btn_icon"
+                  icon-name="standard:case"
+                ></lightning-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="slds-modal__footer">
+          <button
+            class="slds-button slds-button_neutral"
+            aria-label="Cancel and Close"
+            onclick={handleCancelModal}
+          >
+            Cancel
+          </button>
+
+          <button class="slds-button slds-button_brand">Save</button>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+  <!-- <c-ay-case-modal> </c-ay-case-modal> -->
+</template>

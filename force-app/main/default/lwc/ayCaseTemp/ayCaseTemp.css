@@ -1,0 +1,195 @@
+.gridDesign {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+    "hd hd hd"
+    "main main right"
+    "main main cu"
+    "details details details"
+    "lw lw lw";
+}
+
+.top {
+  grid-area: hd;
+  /* flex-direction: row; */
+
+  margin: 5px;
+  padding: 20px;
+  margin: 5px;
+  padding: 20px;
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+}
+
+.lower {
+  grid-area: lw;
+
+  justify-content: right;
+  margin: 5px;
+  padding: 20px;
+}
+
+.customer {
+  grid-area: cu;
+
+  margin: 5px;
+  padding: 20px;
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+}
+.content {
+  grid-area: main;
+  margin: 5px;
+  padding: 20px;
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+}
+
+.right {
+  grid-area: right;
+  margin: 5px;
+  padding: 20px;
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+}
+
+.sectionLabel {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  font: red;
+  background-color: aqua;
+  max-width: 100%;
+  min-width: 30%;
+  font-size: 1.4em;
+  padding: 10px;
+  border-radius: 10px;
+}
+.standardLabel {
+  align-self: end;
+  padding: 10px;
+}
+.labelsCustom {
+  display: flex;
+  align-self: end;
+  font-weight: bold;
+  color: blue;
+  font-size: 1.2em;
+  padding-right: 10px;
+}
+
+.boxheight {
+  min-height: 80%;
+  max-height: 80%;
+}
+.tabBoxes {
+  /* display: flex; */
+  /* margin: 10px 50px 20px 0; */
+  /* padding: 20px; */
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+  height: 200px;
+  width: 425px;
+}
+
+.boxTop {
+  /* display: flex; */
+  /* margin: 10px 50px 20px 0; */
+  /* padding: 20px; */
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+}
+.boxes {
+  display: flex;
+  /* margin: 10px 50px 20px 0; */
+  /* padding: 20px; */
+  border: solid;
+  border-color: grey;
+  background: #ced0d6;
+  border-radius: 10px;
+}
+/* Input Section */
+.resizedTextbox {
+  max-width: 60%;
+  min-width: 30%;
+}
+
+.inputWidth40 {
+  max-width: 40%;
+  min-width: 30%;
+}
+
+.inputWidth20 {
+  max-width: 20%;
+  min-width: 20%;
+}
+.inputWidth30 {
+  max-width: 30%;
+  min-width: 30%;
+}
+.inputWidth60 {
+  max-width: 60%;
+  min-width: 60%;
+}
+.inputWidth80 {
+  max-width: 100%;
+  min-width: 100%;
+}
+.inputWidth100 {
+  flex-grow: 1;
+  max-width: 60%;
+  min-width: 200px;
+}
+.buttons {
+  padding-right: 15px;
+}
+/* Tab Section
+ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  /* max-width: 400px; */
+  font-family: sans-serif;
+}
+
+.tabs__label {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.tabs__radio {
+  display: none;
+}
+
+.tabs__content {
+  order: 1;
+  width: 100%;
+  border-bottom: 3px solid #dddddd;
+  line-height: 1.5;
+  font-size: 0.9em;
+  display: none;
+}
+
+.tabs__radio:checked + .tabs__label {
+  font-weight: bold;
+  color: #009578;
+  border-bottom: 2px solid #009578;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+  display: initial;
+}

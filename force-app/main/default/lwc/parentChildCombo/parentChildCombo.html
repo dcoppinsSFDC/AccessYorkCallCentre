@@ -1,0 +1,49 @@
+<!--
+  @description       : 
+  @author            : dcoppins.cert@gmail.com
+  @group             : 
+  @last modified on  : 04-23-2022
+  @last modified by  : dcoppins.cert@gmail.com
+-->
+<template>
+  <lightning-card variant="Narrow" title="v.0001" icon-name="standard:account">
+    <lightning-record-edit-form
+      object-api-name="ParentChildCombo__c"
+      onsuccess={handleSuccess}
+    >
+      <lightning-button-icon
+        icon-name="utility:down"
+        variant="border-filled"
+        alternative-text="Show More"
+        slot="actions"
+      ></lightning-button-icon>
+      <lightning-input-field field-name="Name"></lightning-input-field>
+      <lightning-input-field
+        field-name="Parent_Combo__c"
+      ></lightning-input-field>
+      <lightning-input-field
+        field-name="Child_Combo__c"
+      ></lightning-input-field>
+      <lightning-input-field
+        field-name="Grandchild_Combo__c"
+      ></lightning-input-field>
+      <lightning-input-field
+        field-name="Brother_Combo__c"
+        required
+      ></lightning-input-field>
+      <lightning-input-field
+        field-name="Sister_Combo__c"
+        required
+      ></lightning-input-field>
+      <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+      <p slot="footer">Card Footer</p>
+      <!-- submit -->
+      <lightning-button type="submit" label="Update record"></lightning-button>
+      <lightning-button
+        variant="destructive"
+        label="Reset"
+        onclick={handleReset}
+      ></lightning-button>
+    </lightning-record-edit-form>
+  </lightning-card>
+</template>

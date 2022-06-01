@@ -1,0 +1,89 @@
+.grid_body {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas:
+        "one two three"
+        "four five six"
+        "seven eight nine";
+    justify-content: center;
+    align-items: center;
+    border: 10px;
+    gap: 10px;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.button {
+    display: grid;
+    grid-template-areas:
+        "icon"
+        "text";
+    font: arial;
+    color: grey;
+    justify-content: center;
+    align-items: center;
+    height: 102px;
+    width: 357px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+.btn_text {
+    grid-area: text;
+    display: inline-flex;
+    align-items: center;
+    font: arial;
+    font-size: 30px;
+
+    padding-left: 10px;
+
+    padding-right: 15px;
+}
+
+.btn_icon {
+    grid-area: icon;
+    display: inline-flex;
+    align-items: left;
+}
+
+@media (min-width: 50em) {
+    .button {
+        grid-template-areas: "icon text";
+    }
+}
