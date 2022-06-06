@@ -1,4 +1,7 @@
 .gridDesign {
+  /* max-width: 1600px; */
+  justify-content: center;
+  align-content: center;
   display: grid;
   padding: 20px;
   grid-template-columns: repeat(3, 1fr);
@@ -45,6 +48,7 @@
 }
 .content {
   grid-area: main;
+  min-width: 400px;
   margin: 5px;
   padding: 20px;
   border: solid;
@@ -62,7 +66,14 @@
   background: #ced0d6;
   border-radius: 10px;
 }
-
+/* Flex Section */
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+.flex-child {
+  flex: 1;
+}
 .sectionLabel {
   display: flex;
   flex-basis: 100%;
@@ -80,14 +91,48 @@
   padding: 10px;
 }
 .labelsCustom {
-  display: flex;
-  align-self: end;
   font-weight: bold;
   color: blue;
   font-size: 1.2em;
-  padding-right: 10px;
+  padding: 10px;
+
+  /* padding-top: 20px; */
+  /* align-items: end; */
+}
+.location-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  align-items: center;
+  justify-content: start;
+  border-color: red;
+  background: green;
 }
 
+.status-container {
+  display: flex;
+  flex-wrap: row wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-color: red;
+  background: green;
+}
+.dropdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+}
+.flexbox-container {
+  display: flex;
+  flex-wrap: row wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-color: red;
+  background: green;
+}
 .boxheight {
   min-height: 80%;
   max-height: 80%;
@@ -129,30 +174,26 @@
 }
 
 .inputWidth40 {
-  max-width: 40%;
-  min-width: 30%;
+  max-width: 200px;
+  min-width: 200px;
 }
 
 .inputWidth20 {
-  max-width: 20%;
-  min-width: 20%;
+  width: 180px;
 }
 .inputWidth30 {
   max-width: 30%;
   min-width: 30%;
 }
 .inputWidth60 {
-  max-width: 60%;
-  min-width: 60%;
+  width: 280px;
 }
 .inputWidth80 {
-  max-width: 100%;
-  min-width: 100%;
+  max-width: 80%;
+  min-width: 80%;
 }
 .inputWidth100 {
   flex-grow: 1;
-  max-width: 60%;
-  min-width: 200px;
 }
 .buttons {
   padding-right: 15px;
@@ -193,3 +234,44 @@
 .tabs__radio:checked + .tabs__label + .tabs__content {
   display: initial;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 1000px) {
+  .location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    border-color: red;
+    background: purple;
+  }
+  .right {
+    max-width: 300px;
+  }
+  .customer {
+    max-width: 300px;
+  }
+  .inputWidth30 {
+    min-width: 100%;
+  }
+  .status-container {
+    flex-direction: column;
+    background: purple;
+  }
+  .inputWidth60 {
+    max-width: 100%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 768px) {
+  .location-container {
+    display: flex;
+    flex-wrap: row wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    border-color: red;
+    background: green;
+  }
+} */

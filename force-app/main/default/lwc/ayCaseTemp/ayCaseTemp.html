@@ -2,7 +2,7 @@
   @description       : 
   @author            : dcoppins.cert@gmail.com
   @group             : 
-  @last modified on  : 06-01-2022
+  @last modified on  : 06-04-2022
   @last modified by  : dcoppins.cert@gmail.com
   Modifications Log 
   Ver   Date         Author                    Modification
@@ -32,85 +32,93 @@
           ></lightning-combobox>
         </div> -->
       <div class="top">
-        <div class="labelsCustom">
-          <label for="lblSubject">Subject:</label>
-        </div>
-        <div class="inputWidth100">
-          <lightning-input-field
-            id="lblSubject"
-            field-name="Subject"
-            variant="label-hidden"
-            required
-          ></lightning-input-field>
+        <div class="flex-container">
+          <div class="labelsCustom">
+            <label for="lblSubject">Subject:</label>
+          </div>
+          <div class="flex-child">
+            <lightning-input-field
+              id="lblSubject"
+              field-name="Subject"
+              variant="label-hidden"
+              required
+            ></lightning-input-field>
+          </div>
         </div>
       </div>
 
       <div class="content">
-        <label class="sectionLabel">Case Details: v0009</label>
+        <label class="sectionLabel">Case Details: v0025</label>
 
-        <!-- <div class="childFlex"> -->
-        <div class="inputWidth20">
-          <lightning-input-field
-            field-name="Postal_Code__c"
-            id="lblPostal"
-          ></lightning-input-field>
+        <div class="location-container">
+          <div class="inputWidth20">
+            <lightning-input-field
+              field-name="Postal_Code__c"
+              id="lblPostal"
+            ></lightning-input-field>
+          </div>
+          <label class="labelsCustom">OR</label>
+          <div class="inputWidth30">
+            <lightning-input-field
+              field-name="Municipality__c"
+              id="lblMunicipality"
+              required
+            ></lightning-input-field>
+          </div>
         </div>
-        <label class="standardLabel">OR</label>
-        <div class="inputWidth40">
-          <lightning-input-field
-            field-name="Municipality__c"
-            id="lblMunicipality"
-            required
-          ></lightning-input-field>
+        <div class="location-container">
+          <!-- <div class="dropdown-container"> -->
+          <div class="inputWidth20">
+            <lightning-input-field
+              field-name="Type"
+              id="lblType"
+            ></lightning-input-field>
+            <!-- </div> -->
+          </div>
+          <div class="inputWidth60">
+            <lightning-input-field
+              field-name="Service_Area__c"
+              id="lblServcieArea"
+              required
+            ></lightning-input-field>
+          </div>
         </div>
-        <div class="inputWidth20">
-          <lightning-input-field
-            field-name="Type"
-            id="lblType"
-          ></lightning-input-field>
+        <div class="flexbox-container">
+          <div class="inputWidth20">
+            <lightning-input-field
+              field-name="Branch__c"
+              id="lblBranch"
+              required
+            ></lightning-input-field>
+          </div>
+
+          <div class="inputWidth20">
+            <lightning-input-field
+              field-name="Department__c"
+              id="lblDepartment"
+              required
+            ></lightning-input-field>
+          </div>
         </div>
 
+        <div class="flexbox-container">
+          <div class="inputWidth60">
+            <lightning-input-field
+              field-name="Category__c"
+              id="lblCategory"
+              required
+            ></lightning-input-field>
+          </div>
+
+          <div class="inputWidth60">
+            <lightning-input-field
+              field-name="AY_SubCategory__c"
+              id="lblSubCategory"
+              required
+            ></lightning-input-field>
+          </div>
+        </div>
         <div class="inputWidth60">
-          <lightning-input-field
-            field-name="Service_Area__c"
-            id="lblServcieArea"
-            required
-          ></lightning-input-field>
-        </div>
-
-        <div class="inputWidth20">
-          <lightning-input-field
-            field-name="Branch__c"
-            id="lblBranch"
-            required
-          ></lightning-input-field>
-        </div>
-
-        <div class="inputWidth20">
-          <lightning-input-field
-            field-name="Department__c"
-            id="lblDepartment"
-            required
-          ></lightning-input-field>
-        </div>
-
-        <div class="inputWidth40">
-          <lightning-input-field
-            field-name="Category__c"
-            id="lblCategory"
-            required
-          ></lightning-input-field>
-        </div>
-
-        <div class="inputWidth40">
-          <lightning-input-field
-            field-name="AY_SubCategory__c"
-            id="lblSubCategory"
-            required
-          ></lightning-input-field>
-        </div>
-
-        <div class="inputWidth40">
           <lightning-input-field
             field-name="Case_Detail__c"
             id="lblCaseDetail"
@@ -131,38 +139,40 @@
         </div>
       </div>
       <div class="right">
-        <div class="inputWidth30">
-          <lightning-input-field
-            field-name="Status"
-            value="New"
-            id="lblStatus"
-          ></lightning-input-field>
-        </div>
+        <div class="status-container">
+          <div class="inputWidth30">
+            <lightning-input-field
+              field-name="Status"
+              value="New"
+              id="lblStatus"
+            ></lightning-input-field>
+          </div>
 
-        <div class="inputWidth30">
-          <lightning-input-field
-            field-name="Fully_Resolved__c"
-            id="lblFullyResolved"
-            required
-          ></lightning-input-field>
+          <div class="inputWidth30">
+            <lightning-input-field
+              field-name="Fully_Resolved__c"
+              id="lblFullyResolved"
+              required
+            ></lightning-input-field>
+          </div>
         </div>
-
-        <div class="inputWidth30">
-          <lightning-input-field
-            field-name="Priority"
-            id="lblPriority"
-            required
-          ></lightning-input-field>
+        <div class="status-container">
+          <div class="inputWidth30">
+            <lightning-input-field
+              field-name="Priority"
+              id="lblPriority"
+              required
+            ></lightning-input-field>
+          </div>
+          <div class="inputWidth30">
+            <lightning-input-field
+              field-name="COVID_19_Related__c"
+              id="lblCvoid"
+              required
+            ></lightning-input-field>
+          </div>
         </div>
-        <div class="inputWidth30">
-          <lightning-input-field
-            field-name="COVID_19_Related__c"
-            id="lblCvoid"
-            required
-          ></lightning-input-field>
-        </div>
-
-        <div class="inputWidth40">
+        <div class="inputWidth60">
           <lightning-input-field
             field-name="Origin"
             id="lblOrigin"
